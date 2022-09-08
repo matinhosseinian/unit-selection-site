@@ -19,6 +19,18 @@ class CourseAdmin(nested_admin.NestedModelAdmin):
     list_filter = ("dept_name", "credits", "status")
     search_fields = ["name"]
 
+    actions = ['make_visible', 'make_hidden']
+
+
+    @admin.action(description='Make Visisble')
+    def make_visible(modeladmin, request, queryset):
+        queryset.update(status=True)
+
+    @admin.action(description='Make hidden')
+    def make_hidden(modeladmin, request, queryset):
+        queryset.update(status=False)
+        
+
 class InstructorAdmin(admin.ModelAdmin):
     list_display = ("name", "dept_name",)
     list_filter = ("dept_name",)
