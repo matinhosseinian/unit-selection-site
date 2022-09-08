@@ -1,0 +1,49 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.bg-dark {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.bg-dark a {
+  color: #fff;
+}
+.btn {
+  display: inline-block;
+  padding: 5px 25px;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.bg-primary,
+.btn-primary {
+  background-color: rgb(153, 137, 137);
+  color: #fff;
+}

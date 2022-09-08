@@ -1,0 +1,31 @@
+{% load static %}
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/light.css' %}" id="light">
+    <link rel="stylesheet" href="{% static 'css/utilities.css' %}">
+
+    <title>{% block title %}درباره ما{% endblock title %}</title>
+</head>
+  <body>
+    <div class="contact">
+
+        <div class="container grid">
+            <div class="matin flex">
+                <img src="{% static 'images/Matin.jpg' %}" alt="">
+                <h3>متین حسینیان فرد</h3>
+                <h3 id="email">ایمیل : <a href="mailto:matinhosseini795@gmail.com">matinhosseini795@gmail.com</a></h3>
+                <h3 id="telegram">گیتهاب : <a href="https://github.com/matinhosseinian">matinhosseinian</a></h3>
+                <h3 id="telegram">تلگرام : <a href="https://t.me/matin_h_f">matin_h_f</a></h3>
+            </div>
+         </div>
+    </div>
+  </body>
+</html>

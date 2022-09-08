@@ -1,0 +1,345 @@
+:root {
+  /* --primary-color: #6305dd; */
+  /* --primary-color: #474b48;  */
+  /* --primary-color: #7c7979;  */
+  /* --primary-color: #646464;  */
+  /* --primary-color: #3f51b5;  */
+  /* --primary-color: #a8a2b1; */
+  /* --primary-color: #6e74c5; */
+  /* --primary-color: #555dcc;  */
+  /* --primary-color: #3671a1;  */
+  /* --primary-color: #7c623a;  */
+  /* --primary-color: #3943ce; */
+  /* --primary-color: #2935cf; */
+  /* --primary-color: #cf2d43;  */
+  --primary-color: #da4a5d;
+  /* --primary-color: #8b3f49;  */
+  /* --primary-color: #dd8339; */
+  /* --primary-color: #97935a; */
+  /* --primary-color: #96cc98; */
+
+  /* --secondary-color: rgb(160, 157, 157); */
+
+  --content-color: #646464;
+}
+
+body {
+  background-image: url("../images/cool-background.jpg");
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* margin: 3px 3px; */
+}
+
+.night-light-div {
+  border: 2px solid white;
+  background-color: white;
+}
+
+.search-container {
+  color: #fff;
+}
+
+.search-container button:hover {
+  background-color: rgb(138, 135, 135);
+  cursor: pointer;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 10px;
+  margin: 0 5px;
+  font-size: large;
+  /* line-height: 3.2; */
+}
+
+.navbar a:hover {
+  border-bottom: 2px #fff solid;
+}
+.navbar #night-light a:hover {
+  border-bottom: none;
+}
+.navbar #clock:hover {
+  border-bottom: none;
+}
+
+.body .container .grid {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  background-color: #eeeeee;
+}
+
+/* .body .tag {
+  display: flex;
+  justify-content: left;
+} */
+
+.filter{
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  background-color: #eeeeee;
+}
+
+.filter-form input {
+  background-color: #fff;
+  /* caret-color: #000; */
+}
+.filter-form label {
+  color: rgb(65, 65, 65);
+}
+
+.filter-form button {
+  background-color: rgb(177, 177, 177);
+}
+
+.filter-form button:hover {
+  background-color: rgb(138, 135, 135);
+  cursor: pointer;
+}
+
+.body .tag span {
+  font-size: small;
+  background-color: rgb(212, 209, 209);
+  padding: 5px;
+  /* margin: 0 5px; */
+  border-radius: 10px;
+  /* justify-self: end; */
+  margin-top: 10px;
+}
+
+/* slide show text */
+.body .slideshow-container .text {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  text-align: right;
+}
+
+.night-light-div:hover > .www {
+  box-shadow: 0 0 3px 4px rgb(250, 150, 0);
+}
+
+.night-light-div:active > .www {
+  box-shadow: 0 0 5px 6px rgb(221, 214, 8);
+}
+
+
+
+.body .tag span:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  background-color: #b2afaf;
+}
+
+.article-head h3 a {
+  color: #000000;
+}
+
+.sidebar .suggestions {
+  border-bottom: 1px solid #7d7d6a;
+}
+.sidebar .suggestions-head {
+  transition: all 0.1s ease;
+}
+
+.sidebar .suggestions-head:hover {
+  transform: scale(1.02);
+}
+
+.sidebar h4 {
+  background-color: #bbbbbb;
+}
+
+.more .container .grid {
+  /* border-left: 4px solid var(--primary-color);
+    border-right: 4px solid var(--primary-color); */
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  background-color: #eeeeee;
+}
+.more-head h3 a {
+  color: #000000;
+}
+.more .tag span {
+  background-color: rgb(212, 209, 209);
+}
+.more-head h3 a {
+  color: black;
+}
+.more-head h3 a:hover {
+  color: black;
+  cursor: auto;
+}
+.more-head h4 a {
+  color: var(--primary-color);
+}
+.more-head h4 a:hover {
+  color: var(--primary-color);
+  border-bottom: none;
+  cursor: auto;
+}
+.signup {
+  color: #fff;
+}
+.signup h1 {
+  color: #000;
+}
+.signup a {
+  color: rgb(153, 137, 137);
+  border-bottom: 2px solid rgb(153, 137, 137);
+}
+.signup a:hover {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+/* .signup a:active {
+  background-color: black;
+} */
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  /* background-color: ; */
+  display: block;
+  width: 100%;
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  transition: all 0.1s ease;
+}
+.signup-form input:focus {
+  transform: scale(1.02);
+}
+.signup a {
+  transition: all 0.1s ease;
+}
+.signup a:hover {
+  transform: scale(1.03);
+}
+/* .signup a:active {
+  background-color: inherit;
+} */
+.signup .btn {
+  transition: all 0.1s ease;
+}
+.signup .btn:hover {
+  transform: scale(1.03);
+}
+.signup-form {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: #eeeeee;
+}
+.login {
+  color: #fff;
+}
+
+.login h1 {
+  color: #000;
+}
+.login a {
+  color: rgb(153, 137, 137);
+  border-bottom: 2px solid rgb(153, 137, 137);
+  transition: all 0.1s ease;
+}
+
+.comment-con {
+  color: blue;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  border: none;
+}
+
+.login a:hover {
+  color: #000;
+  border-bottom: 2px solid #000;
+  transform: scale(1.03);
+}
+
+.replied-comment-text {
+  color: rgb(0, 0, 0);
+}
+
+.comment h3 {
+  color: black;
+}
+
+.comment-text {
+  color: rgb(0, 0, 0);
+}
+
+/* .login a:active {
+  background-color: inherit;
+} */
+
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  display: block;
+  width: 100%;
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  transition: all 0.1s ease;
+}
+.login .btn {
+  transition: all 0.1s ease;
+}
+.login .btn:hover {
+  transform: scale(1.03);
+}
+
+.login-form input:focus {
+  outline: none;
+  transform: scale(1.02);
+}
+
+.login-form {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: #eeeeee;
+}
+
+.login-form input:focus {
+  outline: none;
+}
+
+.contact .matin,.contact .amirreza {
+  background-color: #eeeeee;
+}
+
+.flex-button a{
+  background-color: #aaaaaa;
+}
+
+.add-post{
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  background-color: #eeeeee;
+}
+.tags-post {
+  border: 2px solid #ccc;
+}
+.add-post .btn {
+  background-color: #00af3b;
+}
+.add-post .btn:hover{
+  background-color: #00cf45;
+}
+
+.ckeck-comment .btn {
+  background-color: #00af3b;
+}
+.ckeck-comment .btn:hover{
+  background-color: #00cf45;
+}
+
+.each-box-ckeck-comment {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+  rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+background-color: #eeeeee;
+}
+

@@ -1,0 +1,175 @@
+{% extends "_base.html" %}
+{% load dict_key %}
+
+{% block title %}پیشنهادات{% endblock title %}
+{% block search_bar %}
+<form class="d-flex" method="GET" action="{% url 'suggest' %}">
+  <input class="form-control me-2" name="search" type="search" placeholder="تعداد واحد مدنظر" aria-label="Search">
+  <button class="btn btn-outline-success" type="submit">نمایش</button>
+</form>
+{% endblock search_bar %}
+{% block content %}
+    <div class="container">
+      {% if message %}
+      <br>
+      <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </symbol>
+      </svg>
+      <div class="alert alert-danger d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+        <div>
+          {{ message }}
+        </div>
+      </div>
+      {% else %}
+
+      {% for table in tables %}
+      <br>
+      <h5>تعداد واحد: {{ table|dict_key:"total_credit" }}</h5><br>
+        <div style="overflow-x: auto" class="container">
+            <table style="overflow-x: auto" class=" text-nowrap table table-striped must-light table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">روز/ساعت</th>
+                    <th class="text-center" scope="col">8-9.5</th>
+                    <th class="text-center" scope="col">10-11.5</th>
+                    <th class="text-center" scope="col">13.5-15</th>
+                    <th class="text-center" scope="col">15.5-17</th>
+                    <th class="text-center" scope="col">17.5-19</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">شنبه</th>
+                    <td class="text-center">{{ table|dict_key:"شنبه"|dict_key:"8-9.5" }}</td>
+                    <td class="text-center">{{ table|dict_key:"شنبه"|dict_key:"10-11.5" }}</td>
+                    <td class="text-center">{{ table|dict_key:"شنبه"|dict_key:"13.5-15" }}</td>
+                    <td class="text-center">{{ table|dict_key:"شنبه"|dict_key:"15.5-17" }}</td>
+                    <td class="text-center">{{ table|dict_key:"شنبه"|dict_key:"17.5-19" }}</td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">یکشنبه</th>
+                    <td class="text-center">{{ table|dict_key:"یکشنبه"|dict_key:"8-9.5" }}</td>
+                    <td class="text-center">{{ table|dict_key:"یکشنبه"|dict_key:"10-11.5" }}</td>
+                    <td class="text-center">{{ table|dict_key:"یکشنبه"|dict_key:"13.5-15" }}</td>
+                    <td class="text-center">{{ table|dict_key:"یکشنبه"|dict_key:"15.5-17" }}</td>
+                    <td class="text-center">{{ table|dict_key:"یکشنبه"|dict_key:"17.5-19" }}</td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">دوشنبه</th>
+                    <td class="text-center">{{ table|dict_key:"دوشنبه"|dict_key:"8-9.5" }}</td>
+                    <td class="text-center">{{ table|dict_key:"دوشنبه"|dict_key:"10-11.5" }}</td>
+                    <td class="text-center">{{ table|dict_key:"دوشنبه"|dict_key:"13.5-15" }}</td>
+                    <td class="text-center">{{ table|dict_key:"دوشنبه"|dict_key:"15.5-17" }}</td>
+                    <td class="text-center">{{ table|dict_key:"دوشنبه"|dict_key:"17.5-19" }}</td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">سشنبه</th>
+                    <td class="text-center">{{ table|dict_key:"سشنبه"|dict_key:"8-9.5" }}</td>
+                    <td class="text-center">{{ table|dict_key:"سشنبه"|dict_key:"10-11.5" }}</td>
+                    <td class="text-center">{{ table|dict_key:"سشنبه"|dict_key:"13.5-15" }}</td>
+                    <td class="text-center">{{ table|dict_key:"سشنبه"|dict_key:"15.5-17" }}</td>
+                    <td class="text-center">{{ table|dict_key:"سشنبه"|dict_key:"17.5-19" }}</td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">چهارشنبه</th>
+                    <td class="text-center">{{ table|dict_key:"چهارشنبه"|dict_key:"8-9.5" }}</td>
+                    <td class="text-center">{{ table|dict_key:"چهارشنبه"|dict_key:"10-11.5" }}</td>
+                    <td class="text-center">{{ table|dict_key:"چهارشنبه"|dict_key:"13.5-15" }}</td>
+                    <td class="text-center">{{ table|dict_key:"چهارشنبه"|dict_key:"15.5-17" }}</td>
+                    <td class="text-center">{{ table|dict_key:"چهارشنبه"|dict_key:"17.5-19" }}</td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">پنجشنبه</th>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">جمعه</th>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                  </tr>
+                </tbody>
+            </table>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  اطلاعات
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div style="overflow-x: auto" class="accordion-body">
+                  <table class="text-nowrap table table-striped table-sm">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th class="text-center" scope="col">تعداد واحد</th>
+                        <th class="text-center" scope="col">تاریخ امتحان</th>
+                        <th class="text-center" scope="col">استاد</th>
+                        <th class="text-center" scope="col">جنسیت</th>
+                        <th class="text-center" scope="col">گروه درس</th>
+                        <th class="text-center" scope="col">کد</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for information in table|dict_key:"informations" %}
+                    <tr>
+                      <th scope="row">{{ information|dict_key:"name" }} {{ information|dict_key:"group" }}</th>
+                      <td class="text-center">{{ information|dict_key:"credit" }}</td>
+                      {% if information|dict_key:"exam_date" != "0" %}
+                      <td class="text-center">{{ information|dict_key:"exam_date" }} | {{ information|dict_key:"exam_time" }}</td>
+                      {% else %}
+                      <td class="text-center">ندارد</td>
+                      {% endif %}
+
+
+                      <td class="text-center">{{ information|dict_key:"instructor" }}</td>
+                      <td class="text-center">{{ information|dict_key:"gender" }}</td>
+                      <td class="text-center">{{ information|dict_key:"group" }}</td>
+                      <td class="text-center"><code>{{ information|dict_key:"code" }}</code></td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        <br><br>
+        <div class="container">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              {% if tables.has_previous %}
+              <li class="page-item"><a class="page-link" href="/suggest/?page={{ tables.previous_page_number }}&search={{ search }}">قبلی</a></li>
+              {% endif %}
+              <li class="page-item"><a class="page-link" href="#"><span class="page-current">
+                صفحه {{ tables.number }} از {{ tables.paginator.num_pages }}
+            </span></a></li>
+            {% if tables.has_next %}
+            <li class="page-item"><a class="page-link" href="/suggest/?page={{ tables.next_page_number }}&search={{ search }}">بعدی</a></li>
+            {% endif %}
+            </ul>
+          </nav>
+        </div>
+        <br><br>
+      {% endif %}
+    </div>
+{% endblock content %}
+

@@ -1,0 +1,52 @@
+{% load static %}
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="{% static 'images/world-wide-web.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link id="dark" media="none" rel="stylesheet" href="{% static 'css/dark.css' %}">
+    <link rel="stylesheet" href="{% static 'css/light.css' %}" id="light">
+    <script src="{% static 'javaScripts/DontBilndMe!.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/slideShow.css' %}">
+    <link rel="stylesheet" href="{% static 'css/utilities.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ex.css' %}">
+    <link rel="stylesheet" href="{% static 'css/overlay!mobile.css' %}">
+
+    <title>{% block title %}ورود{% endblock title %}</title>
+</head>
+  <body>
+
+    <section class="login">
+        <div class="grid">
+            <div class="container grid">
+
+                <div class="login-form">
+                    <h1>ورود</h1>
+                    <form method="POST">
+                        {% csrf_token %}
+                        {% for field in form %}
+                        <div class="form-control">
+                            {{ field }}
+                        </div>
+                        {% endfor %}
+                        <div class="flex">
+                            <input type="submit" value="ورود" class="btn btn-primary">
+                            <a href="{% url 'signup' %}">ثبت نام</a>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>  
+    
+  </body>
+</html>
